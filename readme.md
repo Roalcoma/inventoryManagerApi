@@ -47,8 +47,9 @@ Rutas Disponibles
 | GET  | /api/products  | Obtener la lista de productos.  |
 | POST  | /api/products  | Añadir un nuevo producto al inventario.  |
 
-Contribuciones
-Este proyecto aún está en desarrollo. Si deseas contribuir, por favor abre un pull request con tus cambios.
+##Contribuciones
+
+**Este proyecto aún está en desarrollo. Si deseas contribuir, por favor abre un pull request con tus cambios.**
 
 ```yaml
 
