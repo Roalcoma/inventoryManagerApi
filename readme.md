@@ -20,9 +20,11 @@
    git clone https://github.com/tu-usuario/inventoryManagerApi.git
 
 2. Instala las dependencias:
+   ```bash
     npm install
 
-3. Crea el archivo .env en la raíz del proyecto y agrega tus variables de entorno:
+4. Crea el archivo .env en la raíz del proyecto y agrega tus variables de entorno:
+   ```makefile
     DB_USER=usuario_db
     DB_HOST=localhost
     DB_NAME=inventory_manager_db
@@ -30,18 +32,26 @@
     DB_PORT=5432
     JWT_SECRET=tu_secreto_jwt
 
-4. Ejecuta el servidor:
+5. Ejecuta el servidor:
+   ```bash
     npm start
-    La API estará disponible en http://localhost:3000.
+   
+La API estará disponible en http://localhost:3000.
 
 Rutas Disponibles
-Método	Ruta	Descripción
-POST	/api/auth/register	Registrar un nuevo usuario.
-POST	/api/auth/login	Iniciar sesión y obtener JWT.
-GET	/api/products	Obtener la lista de productos.
-POST	/api/products	Añadir un nuevo producto al inventario.
-Contribuciones
-Este proyecto aún está en desarrollo. Si deseas contribuir, por favor abre un pull request con tus cambios.
+
+|    Método   |     Ruta    | Descripción |
+|-------------|-------------|-------------|
+| POST | /api/auth/register  | Registrar un nuevo usuario.  |
+| POST  | /api/auth/login  | Iniciar sesión y obtener JWT.  |
+| GET  | /api/products  | Obtener la lista de productos.  |
+| POST  | /api/products  | Añadir un nuevo producto al inventario.  |
+
+## Contribuciones
+
+**Este proyecto aún está en desarrollo. Si deseas contribuir, por favor abre un pull request con tus cambios.**
+
+```yaml
 
 ---
 
