@@ -44,7 +44,7 @@ Rutas Disponibles
 |-------------|-------------|-------------|
 | POST | /api/auth/register  | Registrar un nuevo usuario.  |
 | POST  | /api/auth/login  | Iniciar sesión y obtener JWT.  |
-| GET  | /api/products  | Obtener la lista de productos.  |
+| GET  | /api/products/all  | Obtener la lista de productos.  |
 | POST  | /api/products  | Añadir un nuevo producto al inventario.  |
 
 ## Contribuciones
