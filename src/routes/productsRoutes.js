@@ -3,5 +3,7 @@ import { productsControllers } from "../controllers/productsControllers.js";
 
 export const productsRouter = Router();
 
-productsRouter.get('/all', productsControllers.getProducts)
+productsRouter.get('/', productsControllers.getProducts)
+
+productsRouter.post('/', productsControllers.postProducts)
 

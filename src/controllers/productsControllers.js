@@ -15,4 +15,20 @@ export class productsControllers {
             })
         }
     }
+
+    static async postProducts(req, res) {
+        const { name, description, quantity, price } = req.body;
+        const products = await pgconnection.products(name, description, quantity, price)
+        if (products === -1) {
+            res.status(500).json({
+                success: false,
+                message: 'Internal server error'
+            })
+        } else {
+            res.status(200).json({
+                success: true,
+                message: 'Product created successfully'
+            })
+        }
+    }
 }
