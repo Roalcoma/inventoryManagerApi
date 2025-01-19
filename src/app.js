@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 
 import { productsRouter } from './routes/productsRoutes.js';
+import { usersRouter } from './routes/usersRoutes.js';
 
 export const app = express();
 
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Rutas
 app.use('/api/products', productsRouter)
+app.use('/api/auth', usersRouter)
 
 // Ruta por defecto
 app.use((req, res) => {

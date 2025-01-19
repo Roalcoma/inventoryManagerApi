@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { productsControllers } from "../controllers/productsControllers.js";
+import { authMiddleware } from "../middleware/authMiddleware.js";
 
 export const productsRouter = Router();
 
-productsRouter.get('/', productsControllers.getProducts)
+productsRouter.get('/', authMiddleware, productsControllers.getProducts)
 
-productsRouter.post('/', productsControllers.postProducts)
+productsRouter.post('/', authMiddleware, productsControllers.postProducts)
 

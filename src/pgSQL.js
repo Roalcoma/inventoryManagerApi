@@ -29,3 +29,33 @@ export class pgconnection {
         }
     }
 }
+
+export class pgconnectionUsers {
+    static async createUser(name, email, password) {
+        try {
+            const query = `INSERT INTO public.users(
+                                name, email, password, created_at, updated_at)
+                                VALUES (?, ?, ?);`
+
+            const values = [name, email, password]
+
+            const result = await pool.query(query, values)
+            return 1
+        } catch (error) {
+            console.log(error)
+            return -1
+        }
+    }
+
+    static async loginUser(email, password) {
+        try {
+            const query = `SELECT * FROM users WHERE email = $1`
+
+            const result = await pool.query(query, [email])
+            return result.rows
+        } catch (error) {
+            console.log(error)
+            return -1
+        }
+    }
+}
