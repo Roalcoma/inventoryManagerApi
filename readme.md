@@ -17,7 +17,7 @@
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/inventoryManagerApi.git
+   git clone https://github.com/roalcoma/inventoryManagerApi.git
 
 2. Instala las dependencias:
    ```bash
