@@ -34,7 +34,7 @@ export class pgconnectionUsers {
     static async createUser(name, email, password) {
         try {
             const query = `INSERT INTO public.users(
-                                name, email, password, created_at, updated_at)
+                                name, email, password)
                                 VALUES (?, ?, ?);`
 
             const values = [name, email, password]
@@ -58,4 +58,5 @@ export class pgconnectionUsers {
             return -1
         }
     }
+
 }
